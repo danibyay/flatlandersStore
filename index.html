@@ -4,6 +4,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   </head>
   <body ng-controller="StoreController as store">
+    <h1>Flatlander's Store </h1>
+
     <ul class="list-group">
 
       <li class="list-group-item" ng-repeat="product in store.products">
@@ -17,26 +19,25 @@
         <p> {{product.description}}</p>
         <button ng-show="product.canPurchase"> Add to Cart </button>
         <p>
-
         </p>
-        <section ng-init="tab = 1">
+        <section ng-controller="PanelController as panel">
           <ul class= "nav nav-pills">
-            <li ng-class="{ active:tab === 1}">
-              <a href ng-click="tab = 1">Description </a> </li>
-            <li ng-class="{ active:tab === 2}">
-              <a href ng-click="tab = 2"> Specifications </a> </li>
-            <li ng-class="{ active:tab === 3}">
-              <a href ng-click="tab = 3"> Reviews </a> </li>
+            <li ng-class="{ active: panel.isSelected(1)}">
+              <a href ng-click="panel.selectTab(1)">Description </a> </li>
+            <li ng-class="{ active:panel.isSelected(2)}">
+              <a href ng-click="panel.selectTab(2)"> Specifications </a> </li>
+            <li ng-class="{ active: panel.isSelected(3)}">
+              <a href ng-click="panel.selectTab(3)"> Reviews </a> </li>
           </ul>
-          <div class="panel" ng-show="tab === 1">
+          <div class="panel" ng-show="panel.isSelected(1)">
             <h4>Description </h4>
             <p>{{product.description}}</p>
           </div>
-          <div class="panel" ng-show="tab === 2">
+          <div class="panel" ng-show="panel.isSelected(2)">
             <h4>Specifications </h4>
             <p>{{product.specifications}}</p>
           </div>
-          <div class="panel" ng-show="tab === 3">
+          <div class="panel" ng-show="panel.isSelected(3)">
             <h4>Reviews </h4>
             <p>{{product.reviews}}</p>
           </div>
