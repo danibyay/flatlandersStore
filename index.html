@@ -16,6 +16,14 @@
         </div>
         <p> {{product.description}}</p>
         <button ng-show="product.canPurchase"> Add to Cart </button>
+        <section>
+          <ul class= "nav nav-pills">
+            <li> <a href ng-click="tab = product.description">Description </a> </li>
+            <li> <a href ng-click="tab = product.specifications"> Specifications </a> </li>
+            <li> <a href ng-click="tab = product.reviews"> Reviews </a> </li>
+          </ul>
+          {{tab}}
+        </section>
       </li>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>

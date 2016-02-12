@@ -12,7 +12,9 @@
       description: ' This is a very cool gem, buy it right now',
       image: 'x.png',
       canPurchase: true,
-      soldOut: false
+      soldOut: false,
+      specifications: "This is why a gem can be very specific",
+      reviews: "There are no reviews yet for this gem, yem, yum"
     },
     {
       name: 'Pentagonal Gem',
@@ -20,7 +22,11 @@
       image: 'w.png' ,
       description: ' This is a very cool gem, buy it right now',
       canPurchase: true,
-      soldOut: false
+      soldOut: false,
+      specifications: "This is why a gem can be very specific",
+      reviews: "There are no reviews yet for this gem, yem, yum"
+
+
     },
     {
       name: 'Zaphire',
@@ -28,7 +34,11 @@
       image: 'z.png' ,
       description: ' This is a very cool gem, buy it right now',
       canPurchase: true,
-      soldOut: false
+      soldOut: false,
+      specifications: "This is why a gem can be very specific",
+      reviews: "There are no reviews yet for this gem, yem, yum"
+
+
     },
     {
       name: 'Not a Ruby',
@@ -36,7 +46,11 @@
       image: 'y.png' ,
       description: ' This is a very cool gem, buy it right now',
       canPurchase: true,
-      soldOut: true
+      soldOut: true,
+      specifications: "This is why a gem can be very specific",
+      reviews: "There are no reviews yet for this gem, yem, yum"
+
+
     }
 
 
