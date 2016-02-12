@@ -9,12 +9,13 @@
       <li class="list-group-item" ng-repeat="product in store.products">
         <h3>
           {{product.name}}
-          <em class="pull-right"> ${{product.price}} </em>
+          <em class="pull-right"> {{product.price | currency}} </em>
+          <img ng-src="{{product.images[0].full}}"/>
         </h3>
 
         <p> {{product.description}}</p>
         <button ng-show="product.canPurchase"> Add to Cart </button>
-      </div>
+      </li>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
