@@ -10,9 +10,12 @@
         <h3>
           {{product.name}}
           <em class="pull-right"> {{product.price | currency}} </em>
-          <img ng-src="{{product.images[0].full}}"/>
         </h3>
-
+        <ul class="gallery">
+          <li ng-repeat="image in product.images">
+            <img ng-src="{{image}}"/>
+          </li>
+        </ul>
         <p> {{product.description}}</p>
         <button ng-show="product.canPurchase"> Add to Cart </button>
       </li>
