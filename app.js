@@ -10,14 +10,30 @@
       name: 'Dodecahedron',
       price: 2,
       description: ' This is a very cool gem, buy it right now',
-      images: ['x.png', 'y.png'],
+      image: 'x.png',
       canPurchase: true,
       soldOut: false
     },
     {
       name: 'Pentagonal Gem',
       price: 5.95,
-      images: ['w.png', 'z.png'  ],
+      image: 'w.png' ,
+      description: ' This is a very cool gem, buy it right now',
+      canPurchase: true,
+      soldOut: false
+    },
+    {
+      name: 'Zaphire',
+      price: 10.99,
+      image: 'z.png' ,
+      description: ' This is a very cool gem, buy it right now',
+      canPurchase: true,
+      soldOut: false
+    },
+    {
+      name: 'Not a Ruby',
+      price: 8,
+      image: 'y.png' ,
       description: ' This is a very cool gem, buy it right now',
       canPurchase: true,
       soldOut: true
